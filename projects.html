@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё портфолио</title>
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script type="text/javascript">
+        function lifeSite() {
+          var start = new Date('December 17, 2024'); // Дата создания сайта
+          var end = new Date();
+          var life = Math.round((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+          var suffix = new Array("день", "дня", "дней");
+          var keys = [2, 0, 1, 1, 1, 2];
+          var mod = life % 100;
+          var suffix_key = mod > 4 && mod < 20 ? 2 : keys[Math.min(mod%10, 5)];
+          document.getElementById("life_site").innerHTML = life + " " + suffix[suffix_key];
+        }
+      </script>
+</head>
+<body onload="lifeSite()">
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-row">
+                <p>Сайт существует: <span id="life_site" style="color: #00BFFF; font-size: 120%; font-weight: bold;"></span></p>
+                <a href="./index.html" class="logo"><strong> Туов Н.Р.</a>
+                <ul class="nav-list">
+                    <li class="nav-list__item"><a href="./index.html" class="nav-list__link ">Обо мне</a></li>
+                    <li class="nav-list__item"><a href="./projects.html" class="nav-list__link nav-list__link--active">Мои проекты</a></li>
+                    <li class="nav-list__item"><a href="./education.html" class="nav-list__link">Образование</a></li>
+                    <li class="nav-list__item"><a href="./news.html" class="nav-list__link ">Новости</a></li>
+                    <li class="nav-list__item"><a href="./contacts.html" class="nav-list__link">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="section">
+        <div class="container">
+            <h2 class="title-1">Мои проекты</h2>
+            <ul class="projects">
+                <li class="project">
+                    <img src="./img/основная часть личного дневника.jpg" alt="Project img" class="project__img">
+                    <h3 class="project__title">Онлайн-ежедневник   <font size="6" color="#A2A8FF">My Secret</font></h3>
+                </li>
+
+            </ul>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <ul class="social">
+                    <li class="social__item"><a href="https://vk.com/id443006409"><img src="./img/icons/VK.png" alt="Link"></a></li>
+                    <li class="social__item"><a href="https://web.telegram.org/k/#@Tuov_n"><img src="./img/icons/Telegram.png" alt="Link"></a></li>
+                </ul>
+                <div class="copyright">
+                    <p>© 2024 Нурбий - студент Адыгейского Государственного Университета</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
